@@ -1,0 +1,253 @@
+.wrapper
+    background: $clr2
+    
+// Header
+    
+.header
+    min-height: 58px
+    background: $clr1
+    @extend %flex-center
+    width: 100%
+
+.header-title
+    text-transform: uppercase
+    @extend %titles
+
+// Main
+
+.main
+    padding: 51px 175px 100px 225px
+
+.main-mobile-photo
+    display: none
+    
+.main-adaptive-photo
+    display: none
+    
+.main-photo
+    margin-right: 68px
+
+.main-inner
+    color: #fff
+    max-width: 559px
+    display: inline-block
+
+.main-title
+    @extend %titles
+
+.main-hr
+    border: none
+    height: 4px
+    background: $clr1
+    margin-top: 14px
+    margin-bottom: 12px
+
+.main-subtitle
+    @extend %subtitles
+
+.main-text
+    @extend %texts
+    margin: 30px 0
+
+.contact-me
+    border: 2px solid #fff
+    box-sizing: border-box
+    font-weight: bold
+    font-size: 18px
+    line-height: 21px
+    text-align: center
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    width: 293px
+    height: 50px
+    transition: .2s
+    &:hover
+        transform: scale(1.05)
+        background: $clr1
+        border: none
+    &:active
+        transform: scale(1.02)
+
+// Section
+
+.section-title
+    @extend %subtitles
+    margin: 104px 0 15px 0
+
+.section-subtitle
+    @extend %texts
+
+.section-inner
+    display: flex
+    gap: 20px
+    flex-wrap: wrap
+    margin-top: 28px
+
+.section-img
+    max-width: 100%
+    max-height: 100%
+    position: relative
+    cursor: pointer
+    transition: .2s
+    &:hover
+        transform: scale(1.03)
+        .section-img-overlay
+            opacity: 1
+
+.section-img-overlay
+    background: linear-gradient(0deg, rgba(25, 132, 155, 0.5), rgba(25, 132, 155, 0.5)), url(.jpg)
+    width: 245px
+    @extend %flex-center
+    height: 245px
+    opacity: 0
+    position: relative
+    z-index: 5
+    transition: .2s
+
+.gallery-img
+    position: absolute
+    z-index: 0
+
+.img-content
+    width: 675px
+    height: 675px
+
+// Modal Block
+.modal-form-overlay
+    opacity: 0
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: -1
+    background: rgba(25, 132, 155, 0.3)
+    width: 100%
+    height: 100%
+    transition: all 1.1s ease 0s
+    @extend %flex-center
+    
+.modal-form-overlay.active
+    overflow: hidden
+    opacity: 1
+    z-index: 10
+    
+.modal-form
+    width: 656px
+    height: 586px
+    background: $clr2
+    color: #fff
+    padding: 44px 49px
+    transition: all 1.1s ease 0s
+    transform: perspective(600px) translate(0px, -100%) rotateX(180deg)
+
+.modal-form.active
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg)
+
+.modal-form-title
+    @extend %subtitles
+    margin-bottom: 15px
+
+.modal-form-text
+    @extend %texts
+
+// Модалка Зум
+
+.modal-overlay.active
+    opacity: 1
+    z-index: 99
+
+.modal-overlay
+    opacity: 0
+    overflow: hidden
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: -1
+    background: rgba(25, 132, 155, 0.3)
+    width: 100%
+    height: 100%
+    transition: .2s
+    @extend %flex-center
+
+.modal-img
+    width: 675px
+    height: 675px
+
+.form
+    display: flex
+    flex-wrap: wrap
+    gap: 20px
+    margin-top: 26px
+
+.input
+    padding: 16px
+    background: #324B53
+    border: none
+    caret-color: #fff
+    color: #fff
+
+.input-name
+    width: 190px
+
+.input-email
+    width: 347px
+
+.textarea-description
+    width: 100%
+    height: 219px 
+    resize: none
+
+.send-message
+    @extend .contact-me
+
+// Footer
+
+.footer
+    min-height: 205px
+    width: 100%
+
+.footer-inner
+    min-height: calc( 205px - 44px)
+    background: $clr1
+    @extend %flex-center
+
+.footer-inner-contacts
+    margin-left: 35px
+    
+.footer-title
+    font-weight: bold
+    font-size: 22px
+    line-height: 25px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    color: #fff
+
+.footer-phone
+    font-size: 18px
+    line-height: 21px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    color: #fff
+    margin: 6px 0
+
+.footer-location
+    font-size: 16px
+    line-height: 18px
+    letter-spacing: 0.01em
+    color: #fff
+    
+.footer-footer
+    background: #16758A
+    min-height: 44px
+    @extend %flex-center
+
+.footer-footer-text
+    font-weight: 500
+    font-size: 12px
+    line-height: 14px
+    text-align: center
+    letter-spacing: 0.01em
+    color: rgba(255, 255, 255, 0.7)
